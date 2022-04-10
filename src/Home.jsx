@@ -1,13 +1,15 @@
 import { Header } from './components/Header/Header'
+import { Controls } from './components/Controls/Controls'
 
-import { Global } from "./styleComponents/Global/Global.styled"
+import { Main } from './styleComponents/Basic/Main.styled'
 
 export const Home = () => {
   return (
     <>
-        <Global />
-        <Header />
-
-    </> 
+      <Header />
+      <Main >
+        <Controls />
+      </Main>
+    </>
   )
 }

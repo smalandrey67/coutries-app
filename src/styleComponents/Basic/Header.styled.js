@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const HeaderTag = styled.header`
     box-shadow: var(--shadow);
     background-color: var(--color-alternative);
+    margin-bottom: 50px;
 `
 
 export const Logo = styled.a`

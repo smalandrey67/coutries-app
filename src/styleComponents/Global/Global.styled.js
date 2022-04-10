@@ -16,6 +16,8 @@ export const Global = createGlobalStyle`
         --fw-mormal: 600;
         --fw-bold: 800;
 
+        --br-radius: 10px;
+
     }
 
     body{
@@ -48,6 +50,12 @@ export const Global = createGlobalStyle`
         cursor: pointer;
         border: none;
         background-color: none;
+        outline: none;
+    }
+
+    input {
+        border: none;
+        background-color: transparent;
         outline: none;
     }
     

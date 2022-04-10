@@ -6,7 +6,6 @@ import { Container } from '../../styleComponents/Reused/Container.styled'
 
 import { useTheme } from './hooks/theme'
 
-
 export const Header = () => {
     const { themeHandler, theme } = useTheme()
 
