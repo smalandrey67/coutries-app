@@ -1,15 +1,17 @@
 import { Countrie } from '../Countrie/Countrie'
+import { Spinner } from '../Spinner/Spinner'
 
 import { Section } from '../../styleComponents/Reused/Section.styled'
 import { Container } from '../../styleComponents/Reused/Container.styled'
 import { FlexContainer } from '../../styleComponents/Reused/FlexContainer.styled'
+import { NotFound } from '../../styleComponents/Basic/Countries.styled'
 
 import { useCountries } from './hook/countries'
+import { useSearch } from './hook/search'
 
-import { Spinner } from '../Spinner/Spinner'
-
-export const Countries = () => {
+export const Countries = ({ term }) => {
     const { countries, status } = useCountries()
+    const { visibleItems } = useSearch(countries, term)
 
     return (
         <Section spinner={true}>
@@ -19,8 +21,9 @@ export const Countries = () => {
                     {status === 'pending' ? 
                         <Spinner /> 
                         :
-                        countries.map(countrie => <Countrie key={countrie.name} countrie={countrie} />)
+                        visibleItems.map(countrie => <Countrie key={countrie.name} countrie={countrie} />)
                     }
+                    {(!visibleItems.length && status === 'fulfilled') ? <NotFound>Nothing was found</NotFound> : ''}
                 </FlexContainer>
 
             </Container>

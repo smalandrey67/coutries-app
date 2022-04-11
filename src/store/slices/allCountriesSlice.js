@@ -5,6 +5,7 @@ const allCountriesSlice = createSlice({
     name: 'allCountries',
     initialState: {
         countries: [],
+        foundCountries: [],
         status: null,
         error: null
     },
@@ -44,6 +45,6 @@ const allCountriesSlice = createSlice({
     }
 })
 
-export const { getCountries } = allCountriesSlice.actions
+// export const { } = allCountriesSlice.actions
 export default allCountriesSlice.reducer
 

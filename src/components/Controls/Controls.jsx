@@ -5,12 +5,12 @@ import { FlexContainer } from '../../styleComponents/Reused/FlexContainer.styled
 import { Search } from '../Search/Search'
 import { Select } from '../Select/Select'
 
-export const Controls = () => {
+export const Controls = ({ setTerm }) => {
     return (
         <Section>
             <Container>
                 <FlexContainer justify="space-between">
-                    <Search />
+                    <Search setTerm={setTerm} />
                     <Select />
                 </FlexContainer>
             </Container>
