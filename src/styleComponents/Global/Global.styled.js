@@ -58,6 +58,10 @@ export const Global = createGlobalStyle`
         background-color: transparent;
         outline: none;
     }
+
+    ul {
+        list-style: none;
+    }
     
 `
 

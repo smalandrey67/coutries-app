@@ -1,7 +1,9 @@
 import { Header } from './components/Header/Header'
 import { Controls } from './components/Controls/Controls'
+import { Countries } from './components/Countries/Countries'
 
 import { Main } from './styleComponents/Basic/Main.styled'
+
 
 export const Home = () => {
   return (
@@ -9,6 +11,7 @@ export const Home = () => {
       <Header />
       <Main >
         <Controls />
+        <Countries /> 
       </Main>
     </>
   )

@@ -9,7 +9,7 @@ export const Controls = () => {
     return (
         <Section>
             <Container>
-                <FlexContainer align="flex-start">
+                <FlexContainer justify="space-between">
                     <Search />
                     <Select />
                 </FlexContainer>

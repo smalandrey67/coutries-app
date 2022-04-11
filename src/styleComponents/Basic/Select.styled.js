@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const DropDownContainer = styled.div`
      width: 200px;
      height: 50px;
+     position: relative;
 `;
 
 export const DropDownHeader = styled.div`
@@ -27,7 +28,6 @@ export const DropDownList = styled.ul`
 `;
 
 export const ListItem = styled.li`
-    list-style: none;
     transition: all 0.5s ease;
     padding: 10px;
     border-radius: var(--br-radius);
