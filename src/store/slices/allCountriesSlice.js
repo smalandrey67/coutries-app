@@ -23,15 +23,15 @@ const allCountriesSlice = createSlice({
                     flag: countrie.flag,
                     information: [
                         {
-                            title: 'Population:',
+                            title: 'Population',
                             description: countrie.population
                         },
                         {
-                            title: 'Region:',
+                            title: 'Region',
                             description: countrie.region
                         },
                         {
-                            title: 'Capital:',
+                            title: 'Capital',
                             description: countrie.capital
                         }
                     ]

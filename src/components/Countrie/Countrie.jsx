@@ -14,7 +14,7 @@ export const Countrie = ({ countrie }) => {
         <List>
           {information.map(item => (
             <Item key={item.title}>
-              <ItemBold>{item.title}</ItemBold>
+              <ItemBold>{item.title}:</ItemBold>
               {item.description}
             </Item>
           ))}

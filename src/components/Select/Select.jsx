@@ -4,8 +4,8 @@ import { DropDownContainer, DropDownHeader, DropDownList, ListItem } from '../..
 
 import { useSelect } from './hooks/select'
 
-export const Select = () => {
-    const { isOpen, selectHandler, onOptionClicked, options, selectedOption } = useSelect()
+export const Select = ({ setSelectedOption, selectedOption }) => {
+    const { isOpen, selectHandler, onOptionClicked, options } = useSelect(setSelectedOption)
 
     return (
         <DropDownContainer>

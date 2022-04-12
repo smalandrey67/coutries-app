@@ -9,9 +9,9 @@ import { NotFound } from '../../styleComponents/Basic/Countries.styled'
 import { useCountries } from './hook/countries'
 import { useSearch } from './hook/search'
 
-export const Countries = ({ term }) => {
+export const Countries = ({ term, selectedOption }) => {
     const { countries, status } = useCountries()
-    const { visibleItems } = useSearch(countries, term)
+    const { visibleItems } = useSearch(countries, term, selectedOption)
 
     return (
         <Section spinner={true}>

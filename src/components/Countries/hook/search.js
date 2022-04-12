@@ -1,11 +1,18 @@
-export const useSearch = (countries, term) => {
+export const useSearch = (countries, term, selectedOption) => {
 
     const foundCountries = () => {
-        if(!term){
-            return countries
+        let data = [...countries]
+ 
+        if(selectedOption) {
+            data = data.filter(countrie => countrie.information[1].description.includes(selectedOption))
         }
 
-        return countries.filter(countrie => countrie.name.toLowerCase().includes(term.toLowerCase().trim()))
+        if(term) {
+            data = data.filter(countrie => countrie.name.toLowerCase().includes(term.toLowerCase().trim()))
+        }
+    
+
+        return data
     }
 
     const visibleItems = foundCountries()
