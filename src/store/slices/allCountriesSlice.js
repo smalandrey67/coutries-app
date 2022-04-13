@@ -17,22 +17,22 @@ const allCountriesSlice = createSlice({
         },
         [allCountriesAsync.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
-            state.countries = action.payload.map(countrie => {
+            state.countries = action.payload.map(country => {
                 return {
-                    name: countrie.name,
-                    flag: countrie.flag,
+                    name: country.name,
+                    flag: country.flag,
                     information: [
                         {
                             title: 'Population',
-                            description: countrie.population
+                            description: country.population
                         },
                         {
                             title: 'Region',
-                            description: countrie.region
+                            description: country.region
                         },
                         {
                             title: 'Capital',
-                            description: countrie.capital
+                            description: country.capital
                         }
                     ]
                 }
@@ -44,7 +44,5 @@ const allCountriesSlice = createSlice({
         }
     }
 })
-
-// export const { } = allCountriesSlice.actions
 export default allCountriesSlice.reducer
 

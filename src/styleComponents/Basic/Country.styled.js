@@ -1,7 +1,14 @@
 import styled from "styled-components"
 
 export const ImageWrapper = styled.div`
-   height: 150px;
+    height: ${({ height }) => height || ''};
+    margin: ${({ margin }) => margin || ''};
+    max-width: ${({ maxWidth }) => maxWidth || '' };
+
+
+    @media(max-width: 1050px){
+        margin: 0;
+    }
 `
 
 export const Image = styled.img`
@@ -20,15 +27,25 @@ export const Title = styled.h3`
     margin-bottom: 10px;
 `
 
-export const List = styled.ul``
+export const List = styled.ul`
+    margin: ${({ margin}) => margin ? margin : ''};
+
+
+    @media(max-width: 768px){
+        &:not(:last-child){
+            margin: 0 0 20px 0;
+        }
+    } 
+`
 
 export const Item = styled.li`
     &:not(:last-child){
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 `
 
 export const ItemBold = styled.b`
+    font-size: 17px;
     margin-right: 5px;
 `
 

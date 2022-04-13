@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { Controls } from '../components/Controls/Controls'
-import { Countries } from '../components/Countries/Countries'
+import { Controls } from '../../components/Controls/Controls'
+import { Countries } from '../../components/Countries/Countries'
 
-import { Main } from '../styleComponents/Basic/Main.styled'
+import { Main } from '../../styleComponents/Basic/Main.styled'
 
 export const MainPage = () => {
     const [term, setTerm] = useState('')

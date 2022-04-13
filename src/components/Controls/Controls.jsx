@@ -9,7 +9,7 @@ export const Controls = ({ setTerm, setSelectedOption, selectedOption }) => {
     return (
         <Section>
             <Container>
-                <FlexContainer justify="space-between">
+                <FlexContainer justify="space-between" wrap="wrap">
                     <Search setTerm={setTerm}/>
                     <Select setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
                 </FlexContainer>

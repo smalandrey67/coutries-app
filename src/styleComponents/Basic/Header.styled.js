@@ -1,11 +1,14 @@
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 
 export const HeaderTag = styled.header`
     box-shadow: var(--shadow);
     background-color: var(--color-alternative);
 `
 
-export const Logo = styled.a`
+export const Logo = styled(Link).attrs({
+    to: '/'
+})`
     font-size: var(--fw-sm);
     font-weight: var(--fw-bold);
     color: var(--color-text);

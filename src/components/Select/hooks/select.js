@@ -3,9 +3,7 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export const useSelect = (setSelectedOption) => {
     const [isOpen, setIsOpen] = useState(false)
-    // const [selectedOption, setSelectedOption] = useState(null);
-
-
+   
     // eslint-disable-next-line
     const [options, setOptions] = useState([
         {region: 'Africa', id: nanoid()},
@@ -14,6 +12,7 @@ export const useSelect = (setSelectedOption) => {
         {region: 'Europe', id: nanoid()},
         {region: 'Oceania', id: nanoid()},
     ])
+    
     const selectHandler = () => {
         setIsOpen(prev => !prev)
     }

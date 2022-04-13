@@ -1,12 +1,18 @@
-import { Article } from '../../styleComponents/Basic/Article.styled'
-import { ImageWrapper, Image, Information, Title, List, Item, ItemBold } from '../../styleComponents/Basic/Countrie.styled'
+import { useNavigate } from 'react-router-dom'
 
-export const Countrie = ({ countrie }) => {
-  const { name, flag, information } = countrie
+import { Article } from '../../styleComponents/Basic/Article.styled'
+import { ImageWrapper, Image, Information, Title, List, Item, ItemBold } from '../../styleComponents/Basic/Country.styled'
+
+export const Country = ({ country = [] }) => {
+  const { name, flag, information } = country
+
+  const navigate = useNavigate()
+
+  const goToDetails = () => navigate(`/country/${name}`)
 
   return (
-    <Article>
-      <ImageWrapper>
+    <Article onClick={goToDetails}>
+      <ImageWrapper height="150px">
         <Image src={flag} />
       </ImageWrapper>
       <Information>

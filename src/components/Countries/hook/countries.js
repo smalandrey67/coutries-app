@@ -5,11 +5,15 @@ import { allCountriesAsync } from '../../../store/requests/allCountriesAsync'
 
 export const useCountries = () => { 
     const dispatch = useDispatch()
-    const { countries, status } = useSelector(state => state.allCountries)
+    const { countries, status, error } = useSelector(state => state.allCountries)
 
     useEffect(() => {
         dispatch(allCountriesAsync())
     }, [dispatch])
 
-    return { countries, status }
+    return { 
+        countries, 
+        status, 
+        error,
+    }
 }
