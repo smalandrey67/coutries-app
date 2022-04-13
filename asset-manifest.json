@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/coutries-app/static/js/main.c82ab262.js",
+    "index.html": "/coutries-app/index.html",
+    "main.c82ab262.js.map": "/coutries-app/static/js/main.c82ab262.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c82ab262.js"
+  ]
+}
